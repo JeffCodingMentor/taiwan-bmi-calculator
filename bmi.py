@@ -45,7 +45,7 @@ st.markdown("""
     }
     
     .subtitle-text {
-        color: #4b5563;
+        color: #94a3b8;
         font-size: 1.1rem;
         text-align: center;
         margin-bottom: 2rem;
@@ -53,19 +53,19 @@ st.markdown("""
     
     /* Premium glassmorphism card */
     .result-card {
-        background: rgba(255, 255, 255, 0.85);
-        border: 1px solid rgba(229, 231, 235, 0.5);
+        background: rgba(30, 41, 59, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
         padding: 24px;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
-        color: #1e293b;
+        color: #f8fafc;
     }
     
     .metric-title {
         font-size: 0.95rem;
-        color: #6b7280;
+        color: #94a3b8;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.05em;
@@ -88,12 +88,12 @@ st.markdown("""
     }
     
     .info-card {
-        background-color: #f8fafc;
+        background-color: rgba(15, 23, 42, 0.4);
         border-left: 4px solid #3b82f6;
         padding: 12px 16px;
         border-radius: 0 8px 8px 0;
         margin-bottom: 12px;
-        color: #1e293b;
+        color: #f8fafc;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -242,7 +242,7 @@ if st.session_state.calculated:
         
         gauge_html = f"""
         <div style="margin: 25px 0 10px 0;">
-            <div style="font-weight: 600; font-size: 0.95rem; color: #4b5563; margin-bottom: 8px;">📊 臺灣成人 BMI 分級圖表定位</div>
+            <div style="font-weight: 600; font-size: 0.95rem; color: #94a3b8; margin-bottom: 8px;">📊 臺灣成人 BMI 分級圖表定位</div>
             <div style="display: flex; height: 38px; border-radius: 8px; overflow: hidden; font-weight: bold; font-size: 10px; color: white; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); line-height: 1.2;">
                 <div style="flex: 1; background: #38bdf8; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2px;">
                     <span>過輕</span><span style="font-size: 9px; font-weight: normal; opacity: 0.95;">&lt;18.5</span>
@@ -333,7 +333,7 @@ if st.session_state.calculated:
         
         gauge_html = f"""
         <div style="margin: 25px 0 10px 0;">
-            <div style="font-weight: 600; font-size: 0.95rem; color: #4b5563; margin-bottom: 8px;">📊 臺灣兒童/青少年 ({curr_age}歲{g[0]}生) BMI 分級圖表定位</div>
+            <div style="font-weight: 600; font-size: 0.95rem; color: #94a3b8; margin-bottom: 8px;">📊 臺灣兒童/青少年 ({curr_age}歲{g[0]}生) BMI 分級圖表定位</div>
             <div style="display: flex; height: 38px; border-radius: 8px; overflow: hidden; font-weight: bold; font-size: 10px; color: white; text-shadow: 1px 1px 1px rgba(0,0,0,0.2); line-height: 1.2;">
                 <div style="flex: 1; background: #38bdf8; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2px;">
                     <span>過輕</span><span style="font-size: 9px; font-weight: normal; opacity: 0.95;">&lt;{normal_min:.1f}</span>
@@ -374,7 +374,7 @@ if st.session_state.calculated:
             <div style="flex-grow: 1; max-width: 420px; margin-top: 15px; min-width: 250px;">
                 <div class="info-card" style="border-left-color: {color};">
                     <strong>📏 身高符合之健康體重區間：</strong><br>
-                    <span style="font-size: 1.1rem; color: #1e293b; font-weight: 600;">{min_healthy:.1f} kg ~ {max_healthy:.1f} kg</span>
+                    <span style="font-size: 1.1rem; color: #f8fafc; font-weight: 600;">{min_healthy:.1f} kg ~ {max_healthy:.1f} kg</span>
                 </div>
                 <div class="info-card" style="border-left-color: #6366f1; margin-bottom: 0;">
                     <strong>💡 健康指引提醒：</strong><br>
